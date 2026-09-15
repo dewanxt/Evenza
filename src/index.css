@@ -15,7 +15,3 @@
   --font-onest: "Onest", sans-serif;
   /* --font-inter: "Inter", sans-serif; */
 }
-
-svg{
-  @apply mx-auto
-}

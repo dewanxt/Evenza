@@ -1,4 +1,3 @@
-import React from "react";
 import Container from "./Container";
 import Button from "./Button";
 import play from "../assets/BannerPlayBtn.png";
@@ -38,7 +37,7 @@ const Banner = () => {
           </div>
         </Container>
 
-          <ScrollVelocity
+        <ScrollVelocity
           texts={["Latest Updates * New Announcements * Workshop Alerts * Live Notices * Event Countdown * Workshop Alerts *"]}
           velocity={200}
           className="custom-scroll-text"

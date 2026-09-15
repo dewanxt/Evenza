@@ -1,8 +1,6 @@
-import React from "react";
-
 const SecHead = ({ title, heading, className }) => {
   return (
-    <div className={`${className}`}>
+    <div className={` w-200.25 mx-auto ${className}`}>
       <h5 className="flex items-center gap-2.5 text-sm font-semibold">
         <span className="size-1.5 bg-primary rounded-full"></span>
         {title}

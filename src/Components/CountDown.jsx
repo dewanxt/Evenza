@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { countDownDateAndTime } from "countdown-date-time";
 
 const CountDown = () => {
   const conduct_date = "2026-09-25 16:54:00";
-  const [count,setCount] = useState({})
+  const [count, setCount] = useState({})
 
   useEffect(() => {
     setInterval(() => {
