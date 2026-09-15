@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { MapPin } from 'lucide-react';
-import BgImg from '../assets/EventBg.png';
+import BgImg from '../assets/EventBG.png';
 import SecHead from './SecHead';
 
 // Provides day-based schedule navigation and renders the selected event sessions.
