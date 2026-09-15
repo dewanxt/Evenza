@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { MapPin } from 'lucide-react';
-import BgImg from '../assets/EventBg.png'; 
-import SecHead from './SecHead'; 
+import BgImg from '../assets/EventBg.png';
+import SecHead from './SecHead';
 
+// Provides day-based schedule navigation and renders the selected event sessions.
 const EventSchedule = () => {
-  const [activeDay, setActiveDay] = useState('Day 02'); 
+  const [activeDay, setActiveDay] = useState('Day 02');
 
   const days = ['Day 01', 'Day 02', 'Day 03'];
 
@@ -124,23 +125,24 @@ const EventSchedule = () => {
   };
 
   return (
-    <div className="relative min-h-screen py-20 font-sans text-white overflow-hidden bg-[#1a1035]">
-      
+    // 1. REMOVED min-h-screen to allow the section to size to its content
+    <div className="relative py-20 font-sans text-white overflow-hidden bg-[#1a1035]">
+
       {/* --- Imported Background Image --- */}
-      <img 
-        src={BgImg} 
-        alt="Event Background" 
-        className="absolute inset-0 w-full h-full object-cover z-0" 
+      <img
+        src={BgImg}
+        alt="Event Background"
+        className="absolute inset-0 w-full h-full object-cover z-0"
       />
-      
+
       {/* Dark overlay for readability */}
       <div className="absolute inset-0 bg-black/40 z-0"></div>
 
       {/* Main Container */}
       <div className="relative z-10 max-w-6xl mx-auto px-4">
-        
+
         {/* --- Header Section --- */}
-        <SecHead 
+        <SecHead
           title="Our Event Schedule"
           heading="Explore the complete schedule for our event"
           className="text-center flex flex-col items-center justify-center mb-12"
@@ -155,8 +157,8 @@ const EventSchedule = () => {
                 onClick={() => setActiveDay(day)}
                 className={`
                   px-8 py-3 rounded-full text-sm font-semibold transition-all duration-300
-                  ${activeDay === day 
-                    ? 'bg-white text-[#1a1035] shadow-lg' 
+                  ${activeDay === day
+                    ? 'bg-white text-[#1a1035] shadow-lg'
                     : 'text-white hover:bg-white/10'}
                 `}
               >
@@ -169,8 +171,8 @@ const EventSchedule = () => {
         {/* --- Schedule List --- */}
         <div className="flex flex-col">
           {getActiveSchedule().map((item, index) => (
-            <div 
-              key={item.id} 
+            <div
+              key={item.id}
               className={`
                 grid grid-cols-1 md:grid-cols-12 gap-6 py-8 items-center
                 ${index !== getActiveSchedule().length - 1 ? 'border-b border-white/10' : ''}
@@ -179,7 +181,7 @@ const EventSchedule = () => {
               {/* Column 1: Time & Date (with placeholder for thumbnail) */}
               <div className="md:col-span-3 flex items-center gap-6">
                 {/* Placeholder thumbnail */}
-                <div className="w-16 h-16 rounded-full bg-white/10 flex-shrink-0 border border-white/20"></div> 
+                <div className="w-16 h-16 rounded-full bg-white/10 flex-shrink-0 border border-white/20"></div>
                 <div>
                   <h4 className="font-bold text-lg text-white">{item.time}</h4>
                   <p className="text-gray-300 text-sm">{item.date}</p>

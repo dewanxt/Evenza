@@ -1,11 +1,11 @@
 // PricingCard.jsx
-import React from 'react';
 import { Check } from 'lucide-react';
 
+// Renders one reusable ticket option, including its features and optional badge.
 const PricingCard = ({ icon, title, subtitle, price, features, isPopular }) => {
   return (
     <div className="relative flex flex-col bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 transition-transform duration-300 hover:shadow-xl hover:-translate-y-1">
-      
+
       {/* --- Popular Ribbon --- */}
       {isPopular && (
         <div className="absolute top-0 right-0 w-32 h-32 overflow-hidden z-10">
@@ -26,7 +26,7 @@ const PricingCard = ({ icon, title, subtitle, price, features, isPopular }) => {
             <p className="text-xs text-gray-500 mt-1">{subtitle}</p>
           </div>
         </div>
-        
+
         <div className="flex items-end gap-1">
           <span className="text-4xl font-extrabold text-[#1a1035]">${price}</span>
           <span className="text-sm text-gray-500 mb-1">/One-Time</span>

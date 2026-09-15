@@ -1,17 +1,17 @@
-import React from 'react';
 import { Star, Quote, Zap, Layers, Triangle, Circle, Hexagon } from 'lucide-react';
 import BgImg from '../assets/Background.png';
 import SecHead from './SecHead';
 
+// Presents attendee feedback, ratings, and supporting brand marks.
 const Testimonials = () => {
   return (
     <div className="relative w-full py-24 px-4 font-sans text-white overflow-hidden bg-[#1a1035]">
-      
+
       {/* --- Background Image & Overlay --- */}
-      <img 
-        src={BgImg} 
-        alt="Background" 
-        className="absolute inset-0 w-full h-full object-cover z-0" 
+      <img
+        src={BgImg}
+        alt="Background"
+        className="absolute inset-0 w-full h-full object-cover z-0"
       />
       {/* Dark overlay to ensure text readability and match the purple gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#1a1035]/90 to-[#120b26]/95 z-0"></div>
@@ -26,9 +26,9 @@ const Testimonials = () => {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
-        
+
         {/* --- Header Section --- */}
-        <SecHead 
+        <SecHead
           title="Testimonials"
           heading="What our customers say about their experience"
           className="text-center flex flex-col items-center justify-center mb-16"
@@ -36,7 +36,7 @@ const Testimonials = () => {
 
         {/* --- Testimonial Cards Grid --- */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
-          
+
           {/* Card 1: Client Experience Speak */}
           {/* Changed to dark base styling. Hover applies the purple background. */}
           <div className="
@@ -55,11 +55,11 @@ const Testimonials = () => {
                   +
                 </div>
               </div>
-              
+
               <p className="text-gray-300 group-hover:text-white/90 text-sm font-medium mb-12 transition-colors duration-300">
                 Over 15,000+ Attendees<br />Connected Worldwide
               </p>
-              
+
               <h3 className="text-xl font-bold leading-tight mb-6 text-white">
                 Client Experience Speak<br />For Themselves
               </h3>
@@ -98,10 +98,10 @@ const Testimonials = () => {
             {/* Author Section */}
             <div className="flex items-center justify-between pt-6 border-t border-white/10 group-hover:border-white/20 transition-colors duration-300">
               <div className="flex items-center gap-4">
-                <img 
-                  className="w-12 h-12 rounded-full object-cover" 
-                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&h=100" 
-                  alt="Ralph Edwards" 
+                <img
+                  className="w-12 h-12 rounded-full object-cover"
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&h=100"
+                  alt="Ralph Edwards"
                 />
                 <div>
                   <h4 className="font-bold text-sm">Ralph Edwards</h4>
@@ -137,10 +137,10 @@ const Testimonials = () => {
             {/* Author Section */}
             <div className="flex items-center justify-between pt-6 border-t border-white/10 group-hover:border-white/20 transition-colors duration-300">
               <div className="flex items-center gap-4">
-                <img 
-                  className="w-12 h-12 rounded-full object-cover" 
-                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&h=100" 
-                  alt="Kristin Watson" 
+                <img
+                  className="w-12 h-12 rounded-full object-cover"
+                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&h=100"
+                  alt="Kristin Watson"
                 />
                 <div>
                   <h4 className="font-bold text-sm">Kristin Watson</h4>
@@ -168,7 +168,7 @@ const Testimonials = () => {
           <p className="text-gray-300 text-sm font-medium mb-10">
             Supported by Brands That Inspire Innovation
           </p>
-          
+
           <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16 opacity-80">
             {/* Logo 1 */}
             <div className="flex items-center gap-2 hover:opacity-100 transition-opacity cursor-pointer">

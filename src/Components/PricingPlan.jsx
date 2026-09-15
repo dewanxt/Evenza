@@ -1,11 +1,11 @@
 // PricingPlan.jsx
-import React from 'react';
 import { Layers, User, Gem } from 'lucide-react'; // Using lucide icons to match the design
 import PricingCard from './PricingCard';
 import SecHead from './SecHead';
 
+// Defines the available ticket tiers and lays them out as pricing cards.
 const PricingPlan = () => {
-  
+
   const pricingData = [
     {
       id: 1,
@@ -54,9 +54,9 @@ const PricingPlan = () => {
   return (
     <div className="bg-white py-20 px-4 font-sans min-h-screen">
       <div className="max-w-6xl mx-auto">
-        
+
         {/* --- Header Section --- */}
-        <SecHead 
+        <SecHead
           title="Pricing Plan"
           heading="Discover our flexible pricing plans for attendees"
           className="text-center flex flex-col items-center justify-center mb-16 text-[#1a1035]"

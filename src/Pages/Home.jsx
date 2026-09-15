@@ -9,7 +9,9 @@ import PlayVideo from '../Components/PlayVideo'
 import FAQs from '../Components/FAQs'
 import Testimonials from '../Components/Testimonials'
 import LatestBlog from '../Components/LatestBlog'
+import Footer from '../Components/Footer'
 
+// Composes the complete conference landing page from reusable sections.
 const Home = () => {
   return (
     <div>
@@ -17,13 +19,14 @@ const Home = () => {
       <Banner />
       <AboutUs />
       <CoreFeature />
-      <OurSpeakers/>
-      <EventSchedule/>
-      <PricingPlan/>
-      <PlayVideo/>
-      <FAQs/>
-      <Testimonials/>
-      <LatestBlog/>
+      <OurSpeakers />
+      <EventSchedule />
+      <PricingPlan />
+      <PlayVideo />
+      <FAQs />
+      <Testimonials />
+      <LatestBlog />
+      <Footer />
     </div>
   )
 }

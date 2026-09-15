@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import { countDownDateAndTime } from "countdown-date-time";
 
+// Shows the remaining time until the scheduled event begins.
 const CountDown = () => {
   const conduct_date = "2026-09-25 16:54:00";
   const [count, setCount] = useState({})
 
   useEffect(() => {
+    // Refresh the displayed time once per second while the component is mounted.
     setInterval(() => {
       const countDown = countDownDateAndTime(conduct_date);
       setCount(countDown)

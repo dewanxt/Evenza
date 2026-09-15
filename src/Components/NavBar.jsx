@@ -4,6 +4,7 @@ import Button from './Button'
 import { NavLink } from 'react-router'
 
 
+// Provides the persistent site navigation and primary conference CTA.
 const NavBar = () => {
 
   return (

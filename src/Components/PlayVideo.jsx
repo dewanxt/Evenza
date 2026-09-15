@@ -1,7 +1,8 @@
-import React, { useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import { Play } from 'lucide-react';
 import PlayMp4 from '../assets/The Weeknd & Ariana Grande – Save Your Tears (Live on The 2021 iHeart Radio Music Awards).mp4';
 
+// Switches from a poster image to the event video when the play control is activated.
 const PlayVideo = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef(null);
@@ -11,7 +12,7 @@ const PlayVideo = () => {
 
   const handlePlayClick = () => {
     setIsPlaying(true);
-    
+
     // Use a slight timeout to ensure the video element is rendered in the DOM
     // before we try to call .play() on it.
     setTimeout(() => {
@@ -24,26 +25,26 @@ const PlayVideo = () => {
   return (
     // Outer wrapper - Full width
     <div className="w-full bg-[#1a1035] py-10">
-      
+
       {/* 
         Video Box - Decreased height using responsive vh units.
         Removed aspect-video to allow custom height control. 
       */}
       <div className="relative w-full h-[50vh] md:h-[60vh] lg:h-[70vh] overflow-hidden bg-black">
-        
+
         {/* State 1: Thumbnail & Play Button */}
         {!isPlaying ? (
-          <div 
+          <div
             className="absolute inset-0 w-full h-full cursor-pointer group"
             onClick={handlePlayClick}
           >
             {/* Thumbnail Image - object-cover fills the shorter box nicely */}
-            <img 
-              src={thumbnailUrl} 
-              alt="Video Thumbnail" 
+            <img
+              src={thumbnailUrl}
+              alt="Video Thumbnail"
               className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
             />
-            
+
             {/* Play Button - Centered Middle of the Video */}
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="
@@ -60,12 +61,12 @@ const PlayVideo = () => {
             </div>
           </div>
         ) : (
-          
+
           /* State 2: HTML5 Video Player - object-contain prevents zooming/cropping */
-          <video 
+          <video
             ref={videoRef}
-            src={PlayMp4} 
-            controls 
+            src={PlayMp4}
+            controls
             className="absolute inset-0 w-full h-full object-contain"
           >
             Your browser does not support the video tag.

@@ -10,6 +10,7 @@ import {
 } from "motion/react";
 import "./ScrollVelocity.css";
 
+// Measures the rendered text width so the animation can wrap seamlessly.
 function useElementWidth(ref) {
   const [width, setWidth] = useState(0);
 
@@ -41,6 +42,7 @@ export const ScrollVelocity = ({
   parallaxStyle,
   scrollerStyle,
 }) => {
+  // Animates repeated text copies and adjusts direction from scroll velocity.
   function VelocityText({
     children,
     baseVelocity = velocity,

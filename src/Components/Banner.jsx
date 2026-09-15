@@ -5,6 +5,7 @@ import Img3 from "../assets/Bnr3Img.png";
 import CountDown from "./CountDown";
 import ScrollVelocity from "./ScrollVelocity/ScrollVelocity";
 
+// Renders the landing-page hero, primary calls to action, and event countdown.
 const Banner = () => {
   return (
     <>

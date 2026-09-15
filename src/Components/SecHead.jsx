@@ -1,3 +1,4 @@
+// Standardizes the eyebrow label and heading style used by page sections.
 const SecHead = ({ title, heading, className }) => {
   return (
     <div className={` w-200.25 mx-auto ${className}`}>

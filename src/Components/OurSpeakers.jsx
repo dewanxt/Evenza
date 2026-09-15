@@ -1,10 +1,10 @@
-import React from 'react';
 import { Share2 } from 'lucide-react';
 import Img1 from '../assets/Sophia.png';
 import Img2 from '../assets/Jacob.png';
 import Img3 from '../assets/Ariene.png';
 import SecHead from './SecHead'; // Ensure the path is correct based on your folder structure
 
+// Displays speaker profiles and their conference roles in a responsive grid.
 const OurSpeakers = () => {
   const speakersData = [
     {
@@ -30,9 +30,9 @@ const OurSpeakers = () => {
   return (
     <section className="bg-white py-20 px-4 font-sans">
       <div className="max-w-6xl mx-auto">
-        
+
         {/* --- Header Section --- */}
-        <SecHead 
+        <SecHead
           title="Our Speakers"
           heading="Introducing the expert speakers"
           className="text-center flex flex-col items-center justify-center mb-16 text-[#1a1035]"
@@ -41,15 +41,15 @@ const OurSpeakers = () => {
         {/* --- Speakers Grid --- */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {speakersData.map((speaker) => (
-            <div 
-              key={speaker.id} 
+            <div
+              key={speaker.id}
               className="bg-[#f8f9fa] rounded-3xl p-4 transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl"
             >
               {/* Image Container */}
               <div className="rounded-2xl overflow-hidden mb-6 aspect-4/5">
-                <img 
-                  src={speaker.image} 
-                  alt={speaker.name} 
+                <img
+                  src={speaker.image}
+                  alt={speaker.name}
                   className="w-full h-full object-cover"
                 />
               </div>

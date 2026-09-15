@@ -6,6 +6,7 @@ import aIcon1 from "../assets/AboutIcon1.jpg"
 import aIcon2 from "../assets/AboutIcon2.jpg"
 import aIcon3 from "../assets/AboutIcon3.jpg"
 
+// Presents the event's mission, vision, benefits, and contact information.
 const AboutUs = () => {
   return (
     <>
